@@ -1,0 +1,28 @@
+
+<html>
+<head>
+    <title>Playlist generator</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+<h1>Playlist generator</h1>
+<form method="POST">
+    <div class="form__group field">
+         <label for="name" class="form__label">Enter playlist name</label>
+        <input type="input" class="form__field" placeholder="Name" name="playlist" id='name' required />
+
+    </div>
+    <div class="form__group field">
+        <label for="name" class="form__label">Enter path to local files</label>
+        <input type="input" class="form__field" placeholder="Path" name="path" id='name' required />
+
+    </div>
+    <h2> </h2>
+    <div>
+        <button>Generate playlist</button>
+    </div>
+</form>
+
+
+</body>
+</html>

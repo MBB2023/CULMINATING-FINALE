@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlist</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+<p>Playlist successfully created with {{number}} tracks: {{name}} </p>
+<img class="fit-picture"
+     src="https://i.scdn.co/image/ab67616d0000b2737350905c60dc7a0b89346a61
+"
+      width="200" height="200">
+
+<p>Select the device to start the playlist :</p>
+<form method="POST">
+    {% for i in range(devices_number)%}
+    <div>
+        <label for="button{{i}}">{{devices[i]}}</label>
+        <button type="submit" id="button{{i}}" name="button{{i}}" value="button{{i}}" >Play</button>
+
+
+
+    </div>
+    {% endfor %}
+</form>
+<h1> </h1>
+<form method="POST">
+    <div>
+        <button type="submit" name="reset">Generate an other playlist</button>
+    </div>
+</form>
+
+</body>
+</html>
